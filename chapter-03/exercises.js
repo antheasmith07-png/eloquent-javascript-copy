@@ -1,33 +1,71 @@
 ////////////////////////////////////////////////////////////////////////////////
 // min /////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-
-function min() {
-
+//: create a function that takes in 2 values
+//: return the minimum value
+function min(x, y) {
+return Math.min(x, y);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // isEven //////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
+//:a function that takes in 1 value, a number
+//: returns a boolean value after testing whether the number is even
+function isEven(n) {
+  //if n = 0 then it is even so output true
+if (n === 0) {
+return true;
 
-function isEven() {
-
+//if number is odd return false
+} if (n === 1) {
+  return false;
+  //if number is negative return to the function to test for eveness
+}   if (n < 0) {
+  return isEven(-n);
 }
+// for any other number it's evenness is the same as N - 2
+return isEven(n - 2);
+}
+console.log(isEven(50));
 
 ////////////////////////////////////////////////////////////////////////////////
 // countChars //////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-
-function countChars() {
-
+//I: create a function that does the same as countBs but also has a counts characters argument
+//O: returns a number of how many uppercase Bs are in the string and the character that is to be counted
+function countChars(string, char) {
+  //create a count variable
+  count = 0;
+  //count over the string
+for (var i = 0; i < string.length; i++) {
+  if (string[i] === char) {
+  //add 1 everytime a char is counted
+           count++;
 }
+}
+//return the final count
+    return count;
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // countBs /////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-
-function countBs() {
-
+//I: create a function that takes in an argument of a string
+//O: returns a number of how many uppercase Bs are in the string
+function countBs(string) {
+  //create a count variable
+  count = 0;
+  //count over the string
+for (var i = 0; i < string.length; i++) {
+  if (string[i] === 'B') {
+  //add 1 everytime a B is counted
+           count++;
+}
+}
+//return the final count
+    return count;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
