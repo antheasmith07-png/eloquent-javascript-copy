@@ -1,17 +1,37 @@
 ////////////////////////////////////////////////////////////////////////////////
 // range ///////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-
-function range() {
-
+//I: create a range function that takes in a range of numbers with parameters start and end
+//O: return all the range of numbers
+//C: n/a
+//: n/a
+function range(start, end, step = 1) {
+    //create an array to store the output
+    const output = [];
+  //iterate over the range with the beginning being start and the last item in the array being end
+  for (i = start; i <= end; i += step) {
+    //push to array that sorts values in order
+    output.push(i);
+  }
+    // return all values in the range
+    return output;
 }
+
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // sum /////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-
-function sum() {
-
+//I: Create a function that takes in array of numbers
+//O: returns a sum of those numbers
+function sum(array) {
+  //create an output for the sum to be collected
+  let output = 0;
+  //loop over every number in the array and then add to output
+  for (i = 0; i < array.length; i++) {
+    output += array[i];
+  }
+    return output;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
